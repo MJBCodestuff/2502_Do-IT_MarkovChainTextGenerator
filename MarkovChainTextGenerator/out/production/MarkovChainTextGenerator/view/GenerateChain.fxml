@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MarkovChainTextGenerationGUIController">
+   <children>
+      <Button layoutX="399.0" layoutY="294.0" mnemonicParsing="false" onAction="#generateNewChain" prefHeight="26.0" prefWidth="149.0" text="Generieren" AnchorPane.bottomAnchor="79.6" AnchorPane.rightAnchor="51.400000000000006" />
+      <Button layoutX="398.0" layoutY="339.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="26.0" prefWidth="150.0" text="Abbrechen" AnchorPane.bottomAnchor="34.60000000000002" AnchorPane.rightAnchor="51.60000000000002" />
+      <ComboBox fx:id="generateChain_KorpusChoice" layoutX="28.0" layoutY="46.0" onAction="#setCurrentKorpus" onShowing="#listAvailableKorpusses" prefHeight="26.0" prefWidth="363.0" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="46.0" />
+      <ChoiceBox fx:id="generateChain_OrderChoice" layoutX="28.0" layoutY="123.0" prefWidth="150.0" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="123.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="1" />
+               <String fx:value="2" />
+               <String fx:value="3" />
+               <String fx:value="4" />
+               <String fx:value="5" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Label layoutX="28.0" layoutY="14.0" text="Korpus" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="91.0" text="Ordnung">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
